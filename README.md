@@ -1,7 +1,7 @@
 # Dynamic-Dashboard-Sample2
 This dynamic Power BI dashboard features metrics that update dynamically, providing real-time sales insights, trend analysis, and key performance indicators to support data-driven decision-making
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/986d066b-d13d-4757-bf30-9873769c3bb0/e9e7c78a4640339699ba?experience=power-bi
+### Dashboard Link :
 
 ## Problem Statement
 
