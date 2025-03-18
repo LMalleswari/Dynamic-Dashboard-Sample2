@@ -236,23 +236,46 @@ This dashboard presents sales data across different regions, enabling users to a
             12.Current Monthly Profits
 
                       Current Monthly Profits = 
-                                           var selectedYear = SELECTEDVALUE('Sales Data'[Order Date],YEAR(TODAY()))
-                                           var seletedMonth = SELECTEDVALUE('Sales Data'[Month Number],MONTH(selectedYear))
-                                           var monthlyprofits = CALCULATE(
-                                                                 [Total Profits],
-                                                                 'Sales Data'[Month Number]=seletedMonth,
-                                                                 'Sales Data'[Year]=selectedYear
-                                                                 )
-                                          return
-                                              IF(
-                                                 ISBLANK(monthlyprofits),
-                                                 "No data",
-                                                 monthlyprofits
+                                           var selectedYear = SELECTEDVALUE('Sales Data'[Year],YEAR(TODAY()))
+                                           var selectedMonth = SELECTEDVALUE('Sales Data'[Month Name],MONTH(TODAY()))
+                                           var monthlyprofit = CALCULATE(
+                                                                   [Total Profits],
+                                                                   'Sales Data'[Month Number]=selectedMonth,
+                                                                   'Sales Data'[Year]=selectedYear
+                                                                   )
+                                           return 
+                                               if(
+                                                  ISBLANK(monthlyprofit),
+                                                  "No data",
+                                                  monthlyprofit
+                                                  )
+
+
+         13.Month Profit Dynamic Title
+
+                         Month Profit Dynamic Title = 
+                                             var selectedmonth = SELECTEDVALUE('Sales Data'[Month Name])
+                                             var monthToUse =IF(
+                                                      ISBLANK(selectedmonth)
+                                                      FORMAT(TODAY(),"MMM"),
+                                                      selectedmonth
+                                                         )
+                                             return 
+                                             "Profit for Month " & monthToUse
+
+          14.Monthly Sales Dynamic Title
+                 
+                         Monthly Sales Dynamic Title = 
+                                              var selectedmonth= SELECTEDVALUE('Sales Data'[Month Name])
+                                              var monthToUse = IF(
+                                                 ISBLANK(selectedmonth),
+                                                 FORMAT(TODAY(),
+                                                 "MMM"),selectedmonth
                                                  )
+                                             return 
+                                                 "Sales for Month " & monthToUse
 
-
-
-
+                                                 
 - step 10: Add Slicer for all the measures created.
 
 
