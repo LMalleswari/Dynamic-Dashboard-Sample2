@@ -17,7 +17,7 @@ This dashboard presents sales data across different regions, enabling users to a
 
 - step 4: Under report view , drag Donut chart and add category column to Legend and total sales in values . In visuaization under format turn off the legend ,under slice set spacing to 75% ,under detail labels set label contents to Category column  and under values make all the format changes.Under general turn off title, under Effects set transparency to 100%.
 
-    image 1
+    ![Image](https://github.com/user-attachments/assets/f65d6d0c-0495-45dc-9b9a-382b6a6c9bb4)
 
 - step 5: Now create measures for dynamic selection of Total sales and catogry name for each category.
 
@@ -46,7 +46,7 @@ This dashboard presents sales data across different regions, enabling users to a
    And place the bot cards in centet of donut chart .
      select all 3 charts and right click and group them. 
 
-   image 2 
+   ![Image](https://github.com/user-attachments/assets/b7a816ea-bdbe-4d7b-bea6-7537078d04f9) 
 
 - step 7: Drag a new slicer and add year column to the field and do all required formatting.
   
@@ -275,10 +275,10 @@ This dashboard presents sales data across different regions, enabling users to a
                                              return 
                                                  "Sales for Month " & monthToUse
 
-                                                 
+
 - step 10: Add Slicer for all the measures created.
 
-
+![Image](https://github.com/user-attachments/assets/0e15450d-df96-4f1c-bcab-7e0161912986)
 
 
 
